@@ -1,26 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Document</title>
+<meta charset="UTF-8">
+<title>DOM Traversal</title>
+<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 </head>
+
 <body>
-  <section class="wrapper">
-    <video muted poster="images/vid1_large.png">
-      <!--add sources here-->
-      <!--p4 for safari, always goes first!!-->
-      <source src="video/mini_1.mp4" type="video/mp4">
-      <source src="video/mini_1.webm" type="video/webm">
-      <source src="video/mini_1.ogg" type="video/ogg">
-      Your browser doesn't support the video. Use a browser that doesn't suck!
+    <main>
+
+    <section id="imageContainer">
+    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
+    		<img src="images/stark.jpg"/>
+    		<img src="images/baratheon.jpg"/>
+    		<img src="images/lannister.jpg"/>
+    		<img src="images/tully.jpg"/>
+    		<img src="images/greyjoy.jpg"/>
+    		<img src="images/arryn.jpg"/>
+        </div>
+    </section>
+
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+        </ul>
+    </nav>
+
+    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+
+    <p class="house-info"></p><!-- replace this with house details (github gist for details) -->
+</main>
+
+<section class="lightbox">
+    <span class="close-lightbox">x</span>
+    <!-- add video here with sources for fallback / standards -->
+    <video controls>
+      <source src="video/House-Stark.mp4" type="video/mp4">
+      <!-- add other video formats here for cross browser functionality-->
+
+
     </video>
-    <button>Play</button>
-    <button>Pause</button>
-    <button>Rewind</button>
-  </section>
-  <script src="js/main.js"></script>
+
+</section>
+<script src="js/main.js"></script>
 </body>
 </html>
