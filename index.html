@@ -5,6 +5,7 @@
 <title>DOM Traversal</title>
 <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,20 +34,27 @@
         </ul>
     </nav>
 
-    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+    <h1 class="house-title"></h1><!-- replace this with the house name -->
 
     <p class="house-info"></p><!-- replace this with house details (github gist for details) -->
 </main>
 
 <section class="lightbox">
+<h1 class="house-title"></h1>
     <span class="close-lightbox">x</span>
     <!-- add video here with sources for fallback / standards -->
-    <video controls>
+    <video>
       <source src="video/House-Stark.mp4" type="video/mp4">
       <!-- add other video formats here for cross browser functionality-->
-
-
     </video>
+
+    <div class="controls">
+      <ul>
+        <li class="rewind"><i class="fas fa-backward"></i></li>
+        <li class="play-pause"><i class="fas fa-pause"></i></li>
+        <li class="forward"><i class="fas fa-forward"></i></li>
+      </ul>
+    </div>
 
 </section>
 <script src="js/main.js"></script>
