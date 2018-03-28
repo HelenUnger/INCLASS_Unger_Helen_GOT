@@ -12,7 +12,8 @@ String.prototype.capIt = function () { return this.replace(this.charAt(), this.c
   houseName = document.querySelector('.house-title'),
   rewind = document.querySelector('.rewind'),
   playPause = document.querySelector('.play-pause'),
-  forward = document.querySelector('.forward');
+  forward = document.querySelector('.forward'),
+  imageBanner = document.querySelector('#houseImages');
 
 //functions in the middle
   function loadMovie() {
@@ -30,7 +31,16 @@ String.prototype.capIt = function () { return this.replace(this.charAt(), this.c
 
     vidPlayer.load();
     vidPlayer.play();
+
+    animateBanners(this.dataset.offset);
   }
+
+  function animateBanners(offset) {
+    //animate banners across the screen using the offset attribute
+    // 600 is the width of each image, 
+    imageBanner.style.right = (offset * 600) + "px";
+  }
+
 
   function togglePlay(){
     var theSVG = this.firstElementChild;
