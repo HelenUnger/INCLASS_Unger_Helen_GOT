@@ -8,7 +8,11 @@ String.prototype.capIt = function () { return this.replace(this.charAt(), this.c
   const sigils = document.querySelectorAll('.sigilContainer'),
   lightbox = document.querySelector('.lightbox'),
   closeLightbox = document.querySelector('.close-lightbox'),
-  vidPlayer = document.querySelector('video');
+  vidPlayer = document.querySelector('video'),
+  houseName = document.querySelector('.house-title'),
+  rewind = document.querySelector('.rewind'),
+  playPause = document.querySelector('.play-pause'),
+  forward = document.querySelector('.forward');
 
 //functions in the middle
   function loadMovie() {
@@ -18,8 +22,38 @@ String.prototype.capIt = function () { return this.replace(this.charAt(), this.c
     //next grab the right video based on the class name
     var house = this.className.split(' ')[1].capIt();
 
+    //3 put the path together and make the class load and play
+    vidPlayer.src =
+    `video/House-${house}.${vidPlayer.currentSrc.split('.')[1]}`
+
+    houseName.textContent = `${house}`
+
+    vidPlayer.load();
     vidPlayer.play();
   }
+
+  function togglePlay(){
+    var theSVG = this.firstElementChild;
+    //flip this according to its viseo state
+    //if playing make it pause, change the icon
+    //if paused make it play, change the icon
+    if (vidPlayer.paused){
+      theSVG.dataset.icon = "pause";
+      vidPlayer.play();
+    } else {
+      theSVG.dataset.icon = "play";
+      vidPlayer.pause();
+    }
+  }
+
+  function ffWd() {
+    debugger;
+  }
+
+  function reWd() {
+    debugger;
+  }
+
 
   function closeLBox() {
     lightbox.classList.remove('show-lightbox');
@@ -30,4 +64,9 @@ String.prototype.capIt = function () { return this.replace(this.charAt(), this.c
 //events at the bottom
   sigils.forEach(sigil => sigil.addEventListener('click', loadMovie))
   closeLightbox.addEventListener('click', closeLBox);
+
+  vidPlayer.addEventListener('ended', closeLBox);
+  playPause.addEventListener('click', togglePlay);
+  forward.addEventListener('click', ffWd);
+  rewind.addEventListener('click', reWd);
 })();
