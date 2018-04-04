@@ -12,7 +12,7 @@
     <main>
 
     <section id="imageContainer">
-    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
+    	<div id="houseImages" style="right: 0px;"> <!-- add in all of the images to make a scrolling "banner" -->
         <img src="images/got.jpg"/>
     		<img src="images/stark.jpg"/>
     		<img src="images/baratheon.jpg"/>
@@ -53,6 +53,7 @@
 
     <div class="controls">
       <ul>
+        <li><progress id='progress-bar' min='0' max='100' value='0'>0% played</progress></li>
         <li class="rewind"><i class="fas fa-backward"></i></li>
         <li class="play-pause"><i class="fas fa-pause"></i></li>
         <li class="forward"><i class="fas fa-forward"></i></li>
