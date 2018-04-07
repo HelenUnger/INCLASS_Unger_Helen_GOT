@@ -36,8 +36,9 @@ House Greyjoy's sigil is traditionally a golden kraken on a black field. Their h
 
 `House Arryn of the Eyrie is one of the Great Houses of Westeros. It has ruled over the Vale of Arryn for millennia, originally as the Kings of Mountain and Vale and more recently as Lords Paramount of the Vale and Wardens of the East under the Targaryen kings and Baratheon-Lannister kings. The nominal head of House Arryn is Robin Arryn, the Lord of the Eyrie, with his stepfather Petyr Baelish acting as Lord Protector until he reaches the age of majority.`,
 
-`House Targaryen of Dragonstone is a Great House of Westeros and was the ruling royal House of the Seven Kingdoms for three centuries since it conquered and unified the realm, before it was deposed during Robert's Rebellion and House Baratheon replaced it as the new royal House. The few surviving Targaryens fled into exile to the Free Cities of Essos across the Narrow Sea. Currently based on Dragonstone off of the eastern coast of Westeros, House Targaryen seeks to retake the Seven Kingdoms from House Lannister, who formally replaced House Baratheon as the royal House following the destruction of the Great Sept of Baelor.`];
+`House Targaryen of Dragonstone is a Great House of Westeros and was the ruling royal House of the Seven Kingdoms for three centuries since it conquered and unified the realm, before it was deposed during Robert's Rebellion and House Baratheon replaced it as the new royal House. The few surviving Targaryens fled into exile to the Free Cities of Essos across the Narrow Sea. Currently based on Dragonstone off of the eastern coast of Westeros, House Targaryen seeks to retake the Seven Kingdoms from House Lannister, who formally replaced House Baratheon as the royal House following the destruction of the Great Sept of Baelor.`,
 
+`House Tyrell of Highgarden is an extinct Great House of Westeros. It ruled over the Reach, a vast, fertile, and heavily-populated region of southwestern Westeros, from their castle-seat of Highgarden as Lords Paramount of the Reach and Wardens of the South after taking control of the region from House Gardener during the Targaryen conquest.`];
 
 
 //functions in the middle
@@ -67,18 +68,20 @@ House Greyjoy's sigil is traditionally a golden kraken on a black field. Their h
 
     if (house == "Stark"){
       infoText = info[0];
-    }else if (house == "Baratheon") {
+    }else if (house == "Baratheon"){
       infoText = info[1];
-    }else if (house == "Lannister") {
+    }else if (house == "Lannister"){
       infoText = info[2];
-    }else if (house == "Greyjoy") {
+    }else if (house == "Greyjoy"){
       infoText = info[3];
-    }else if (house == "Tully") {
+    }else if (house == "Tully"){
       infoText = info[4];
-    }else if (house == "Arryn") {
+    }else if (house == "Arryn"){
       infoText = info[5];
+    }else if (house == "Targaryen"){
+      infoText = info[6];
     }else {
-      infoText = info[6]
+      infoText = info[7];
     }
 
     houseInfo.textContent = `${infoText}`;
