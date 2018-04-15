@@ -47,7 +47,7 @@ main {
 
 }
 
-#houseImages { position:relative; width:5800px; transition: all .5s; }
+#houseImages { position:relative; width:6400px; transition: all .5s; }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -93,10 +93,13 @@ main {
 .arryn:hover { background-position:-253px 0px; }
 
 .targaryen { background-position:-304px -54px; }
-.targaryen:hover { background-position:-304px 0px; }
+.targaryen:hover { background-position:-304px -1px; }
 
 .tyrell { background-position:-355.5px -54px; }
 .tyrell:hover { background-position:-355.5px 0px; }
+
+.frey { background-position:-406px -54px; }
+.frey:hover { background-position:-406px -1px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
